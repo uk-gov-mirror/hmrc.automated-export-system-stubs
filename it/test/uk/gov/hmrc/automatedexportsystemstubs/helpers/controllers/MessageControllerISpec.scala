@@ -25,14 +25,13 @@ class MessageControllerISpec extends BaseISpec:
 
   private val endpoint     = "/cds/aesIE507Request/v1"
   private val validHeaders = Seq(
-    "Authorization"     -> "auth-token",
-    "x-correlation-id"  -> "corr-2",
-    "x-conversation-id" -> "con-1",
-    "accept"            -> "application/xml",
-    "content-type"      -> "application/xml",
-    "date"              -> "Fri, 31 Jul 2026 10:30:00 GMT",
-    "x-message-type"    -> "aesIE507Request",
-    "x-forwarded-host"  -> "some-host"
+    "Authorization"    -> "auth-token",
+    "x-correlation-id" -> "corr-2",
+    "accept"           -> "application/xml",
+    "content-type"     -> "application/xml",
+    "date"             -> "Fri, 31 Jul 2026 10:30:00 GMT",
+    "x-message-type"   -> "aesIE507Request",
+    "x-forwarded-host" -> "some-host"
   )
 
   "POST /cds/aesIE507Request/v1" - {

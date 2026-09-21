@@ -74,14 +74,13 @@ class MessageControllerSpec extends BaseSpec with AllMocks:
 
   trait MrnSetup:
     val requiredHeaders = Map(
-      "x-forwarded-host"  -> "*",
-      "x-correlation-id"  -> "*",
-      "x-conversation-id" -> "*",
-      "date"              -> "*",
-      "authorization"     -> "*",
-      "content-type"      -> "application/xml",
-      "accept"            -> "application/xml",
-      "message-type"      -> "aesIE507Request"
+      "x-forwarded-host" -> "*",
+      "x-correlation-id" -> "*",
+      "date"             -> "*",
+      "authorization"    -> "*",
+      "content-type"     -> "application/xml",
+      "accept"           -> "application/xml",
+      "message-type"     -> "aesIE507Request"
     )
     when(mockAppConfig.requiredHeaders).thenReturn(requiredHeaders)
     val validatedRequestAction = ValidatedRequestAction(mock[BodyParsers.Default], mockAppConfig)

@@ -21,14 +21,13 @@ import play.api.test.FakeRequest
 
 object TestData:
   val validAuthHeaders: Headers = Headers(
-    "x-forwarded-host"  -> "10.12.0.4",
-    "x-correlation-id"  -> "some-correlation-id",
-    "x-conversation-id" -> "some-conversation-id",
-    "date"              -> "Sat, 01 Jun 2024 12:00:00 GMT",
-    "content-type"      -> "application/xml",
-    "accept"            -> "application/xml",
-    "authorization"     -> "Bearer test-token",
-    "message-type"      -> "aesIE507Request"
+    "x-forwarded-host" -> "10.12.0.4",
+    "x-correlation-id" -> "some-correlation-id",
+    "date"             -> "Sat, 01 Jun 2024 12:00:00 GMT",
+    "content-type"     -> "application/xml",
+    "accept"           -> "application/xml",
+    "authorization"    -> "Bearer test-token",
+    "message-type"     -> "aesIE507Request"
   )
 
   def requestWithMrn(mrn: String) =
