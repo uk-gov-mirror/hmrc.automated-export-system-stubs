@@ -110,7 +110,6 @@ class MessageController @Inject() (
             val notification = NotificationXmlBuilder.parseIncomingAckXml(correlationId, elem)
             IE917Engine.allMatches(elem) match
               case matches if matches.nonEmpty =>
-                logger.warn("*******" + matches)
                 getXmlErrors(notification, matches)
               case _ =>
                 Ie906Engine.allMatches(elem) match
